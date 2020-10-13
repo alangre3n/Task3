@@ -67,7 +67,7 @@ public class PostgreDB {
 
             int count=0;
             for(int i=0;i<students.size();i+=3) {
-                if(students.get(i)==firstName && students.get(i+1) == lastName && students.get(i) == middleName) {
+                if(students.get(i).equals(firstName) && students.get(i + 1).equals(lastName) && students.get(i).equals(middleName)) {
                     count=1;
                     break;
                 }
