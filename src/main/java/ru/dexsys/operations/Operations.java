@@ -49,7 +49,7 @@ public class Operations {
         connection.close();
     }
 
-    public static void insertStudentTable(String firstName, String lastName, int age) throws  SQLException {
+    public static void insertIntoStudentTable(String firstName, String lastName, int age) throws  SQLException {
         connection = Connector.getConnection();
         sqlStatement = "SELECT * "
                     + "FROM Students "

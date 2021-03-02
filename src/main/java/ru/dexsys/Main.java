@@ -9,10 +9,10 @@ public class Main {
         Operations.createStudentTable();
         Operations.fillStudentTable();
         Operations.showStudentTable();
-        Operations.insertStudentTable("Pavel","Fillipov", 21);
-        Operations.insertStudentTable("Ekaterina","Sadakova", 23);
-        Operations.insertStudentTable("Ivan","Petrov", 28);
-        Operations.insertStudentTable("Oleg","Lukin", 20);
+        Operations.insertIntoStudentTable("Pavel","Fillipov", 21);
+        Operations.insertIntoStudentTable("Ekaterina","Sadakova", 23);
+        Operations.insertIntoStudentTable("Ivan","Petrov", 28);
+        Operations.insertIntoStudentTable("Oleg","Lukin", 20);
         Operations.showStudentTable();
         Operations.dropStudentTable();
     }
