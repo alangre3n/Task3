@@ -4,7 +4,6 @@ import ru.dexsys.connection.Connector;
 import ru.dexsys.student.Student;
 import ru.dexsys.student.StudentController;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
