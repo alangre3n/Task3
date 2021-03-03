@@ -17,7 +17,7 @@ public class Operations {
     private static final ArrayList<Student> students = StudentController.CreateListOfStudents();
     private static ResultSet rs;
 
-    public static void showStudentTable() throws SQLException {
+    public static void showStudentsTable() throws SQLException {
         connection = Connector.getConnection();
         sqlStatement = "SELECT * FROM Students;";
         statement = connection.createStatement();
@@ -36,7 +36,7 @@ public class Operations {
         connection.close();
     }
 
-    public static void createStudentTable() throws SQLException {
+    public static void createStudentsTable() throws SQLException {
         connection = Connector.getConnection();
         sqlStatement = "CREATE TABLE students" +
                        "(Student_Id SERIAL PRIMARY KEY," +
@@ -49,7 +49,7 @@ public class Operations {
         connection.close();
     }
 
-    public static void insertIntoStudentTable(String firstName, String lastName, int age) throws  SQLException {
+    public static void insertIntoStudentsTable(String firstName, String lastName, int age) throws  SQLException {
         connection = Connector.getConnection();
         sqlStatement = "SELECT * "
                     + "FROM Students "
@@ -72,21 +72,13 @@ public class Operations {
         connection.close();
     }
 
-    public static void fillStudentTable() throws SQLException {
-        connection = Connector.getConnection();
+    public static void fillStudentsTable() throws SQLException {
         for (Student s : students) {
-            sqlStatement = "INSERT INTO Students"
-                    + "(first_name, last_name, age) VALUES"
-                    + "('" + s.getFirstName() + "','"
-                    + s.getLastName() + "',"
-                    + s.getAge() + ");";
-            statement = connection.createStatement();
-            statement.execute(sqlStatement);
+            insertIntoStudentsTable(s.getFirstName(),s.getLastName(),s.getAge());
         }
-        connection.close();
     }
 
-    public static void dropStudentTable() throws SQLException {
+    public static void dropStudentsTable() throws SQLException {
         connection = Connector.getConnection();
         sqlStatement = "DROP TABLE students;";
         statement = connection.createStatement();

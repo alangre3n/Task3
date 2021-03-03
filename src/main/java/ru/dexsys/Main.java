@@ -6,14 +6,14 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        Operations.createStudentTable();
-        Operations.fillStudentTable();
-        Operations.showStudentTable();
-        Operations.insertIntoStudentTable("Pavel","Fillipov", 21);
-        Operations.insertIntoStudentTable("Ekaterina","Sadakova", 23);
-        Operations.insertIntoStudentTable("Ivan","Petrov", 28);
-        Operations.insertIntoStudentTable("Oleg","Lukin", 20);
-        Operations.showStudentTable();
-        Operations.dropStudentTable();
+        Operations.createStudentsTable();
+        Operations.fillStudentsTable();
+        Operations.showStudentsTable();
+        Operations.insertIntoStudentsTable("Pavel","Fillipov", 21);
+        Operations.insertIntoStudentsTable("Ekaterina","Sadakova", 23);
+        Operations.insertIntoStudentsTable("Ivan","Petrov", 28);
+        Operations.insertIntoStudentsTable("Oleg","Lukin", 20);
+        Operations.showStudentsTable();
+        Operations.dropStudentsTable();
     }
 }

@@ -20,8 +20,8 @@ public class Student {
     }
 
     public Student() {
-        this.firstName = null;
-        this.lastName = null;
+        this.firstName = "";
+        this.lastName = "";
         this.age = 0;
         this.studentId=++counter;
     }
